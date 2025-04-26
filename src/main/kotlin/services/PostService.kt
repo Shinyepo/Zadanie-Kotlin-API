@@ -1,6 +1,6 @@
 package dev.shinyepo.services
 
-import dev.shinyepo.HttpClientManager
+import dev.shinyepo.network.HttpClientManager
 import dev.shinyepo.models.Post
 import io.ktor.client.call.body
 import io.ktor.client.request.get
