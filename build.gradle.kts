@@ -19,13 +19,21 @@ dependencies {
     implementation("ch.qos.logback:logback-classic:${logbackVersion}")
     implementation("io.ktor:ktor-client-content-negotiation:${ktorVersion}")
     implementation("io.ktor:ktor-serialization-kotlinx-json:${ktorVersion}")
+    implementation(kotlin("stdlib"))
 
     testImplementation(kotlin("test"))
+}
+
+tasks.register<JavaExec>("run") {
+    group = "application"
+    description = "Runs the main function"
+    classpath = sourceSets.main.get().runtimeClasspath
+    mainClass.set("dev.shinyepo.MainKt")
 }
 
 tasks.test {
     useJUnitPlatform()
 }
 kotlin {
-    jvmToolchain(22)
+    jvmToolchain(21)
 }
