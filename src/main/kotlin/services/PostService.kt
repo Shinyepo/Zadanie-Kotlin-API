@@ -9,7 +9,7 @@ class PostService() {
 
     suspend fun fetchAllPosts(): List<Post> {
         return try {
-            HttpClientManager.Client.use { client ->
+            HttpClientManager.client.use { client ->
                 client.get("https://jsonplaceholder.typicode.com/posts").body<List<Post>>()
             }
         } catch (e: Exception) {

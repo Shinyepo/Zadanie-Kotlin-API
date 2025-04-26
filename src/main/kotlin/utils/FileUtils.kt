@@ -5,9 +5,10 @@ import kotlinx.serialization.json.Json
 import java.io.File
 
 object FileUtils {
+    private val readableJson: Json = Json { prettyPrint = true }
 
     fun savePostToFile(post: Post) {
-        val formattedString = Json{ prettyPrint = true }.encodeToString(post)
+        val formattedString = readableJson.encodeToString(post)
 
         val dir = File("posts")
         if (!dir.exists()) {
