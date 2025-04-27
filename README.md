@@ -4,6 +4,11 @@ Program pobierający listę postów z serwisu https://jsonplaceholder.typicode.c
 
 Posty zapisywane są w folderze  `~/posts/` pod nazwą `<id_postu>.json`
 
+## Jak uruchomić
+```
+./gradlew run
+```
+
 ## Stworzony przy użyciu:
 - Kotlin
 - Gradle
