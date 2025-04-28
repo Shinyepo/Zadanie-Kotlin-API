@@ -24,7 +24,7 @@ Posty zapisywane są w folderze  `~/posts/` pod nazwą `<id_postu>.json`
   - `models/Post.kt` - Model danych zwrotnych z API
   - `utils/FileUtils.kt` - Funkcja pomocnicza zapisująca post do pliku
   - `network/HttpClientManager.kt` - Manager klienta HTTP
-- `resources/logback.xml` - Plik konfiguracyjny Logów
+- `src/main/resources/logback.xml` - Plik konfiguracyjny Logów
 
 ## Wymagania
 - JDK 21+
